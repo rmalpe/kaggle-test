@@ -1,0 +1,790 @@
+version: "3.1"
+
+intents:
+  - greetings
+  - bye
+  - help
+  - knowledge
+  - buy_and_sell
+  - indicators
+  - stock_price
+  - introduction
+  - bot_challenge
+  - candle_sticks
+  - market_movers
+  - Compnay Info
+
+entities:
+  - indicator_name
+  - stock market
+  - market type
+  - current price
+  - ticker
+  - investment
+  - buy_stock
+  - sell_stock
+  - quantity
+  - price change
+  - which
+  - price up
+  - price down
+  - close price
+  - open price
+  - high price
+  - low price
+  - eod price
+  - indicator price
+  - tell_stocks
+  - define
+  - working
+  - start_trading
+  - stock_exchange
+  - demat
+  - demat_number
+  - create_demat
+  - is_compulsory
+  - demat_documents
+  - stock_resources
+  - are_you_bot
+  - candle
+  - candle_types
+  - history
+  - predict
+  - pattern
+  - give_best
+  - pattern_type
+  - find
+  - red_candle
+  - green_candle
+  - types
+  - percent_change
+  - steps
+  - tips
+  - ipo_listing_date
+  - get_data
+  - application form
+  - risk factors
+  - ways
+  - apply
+  - online
+  - offline
+  - Minimum Order Quantity
+  - Market Lot Size
+  - withdraw_money
+  - full form
+  - returns
+  - oversubscription
+  - shares_allocation
+  - advantages
+  - disadvantages
+  - ask_where
+  - ask_what
+  - ask_how
+  - ask_yes_no
+  - NSE
+  - BSE
+  - NYSE
+  - latest
+  - forex
+  - crypto
+  - equity
+  - economy
+  - mutual funds
+  - stocksplit
+  - Purpose
+  - NIFTY 50
+  - S&P 500
+  - Dow Jones Industrial Average
+  - BSE SENSEX
+  - not
+  - stocks
+  - hour
+  - day
+  - last
+  - week
+  - month
+  - year
+  - top_gainers
+  - top_losers
+  - top_actives
+  - company outlook
+  - core info
+  - company rating
+  - financial statement
+  - financial score
+  - company notes due
+  - country
+  - rule
+  - marry
+  - abuse
+  - name
+  - weapon
+  - food
+  - date
+  - cop
+  - sad
+  - break
+  - question
+
+slots:
+  marry:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: marry
+
+  abuse:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: abuse
+
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+
+  weapon:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: weapon
+
+  food:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: food
+
+  date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: date
+
+  cop:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: cop
+
+  sad:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: sad
+
+  break:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: break
+
+  question:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: question
+
+  country:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: country
+  
+  financial score:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: financial score
+
+  company notes due:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: company notes due
+
+  financial statement:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: financial statement
+
+  company rating:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: company rating
+
+  core info:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: core info
+
+  company outlook:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: company outlook
+
+  top_losers:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: top_losers
+  
+  top_actives:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: top_actives
+
+  not:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: not
+
+  NIFTY 50:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: NIFTY 50
+
+  S&P 500:
+      type: text
+      mappings:
+      - type: from_entity
+        entity: S&P 500
+
+  Dow Jones Industrial Average:
+      type: text
+      mappings:
+      - type: from_entity
+        entity: Dow Jones Industrial Average
+        
+  BSE SENSEX:
+      type: text
+      mappings:
+      - type: from_entity
+        entity: BSE SENSEX
+
+  Purpose:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: Purpose
+
+  mutual funds:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: mutual funds
+
+  stocksplit:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: stocksplit
+
+  NSE:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: NSE
+  
+  BSE:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: BSE
+  
+  NYSE:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: NYSE
+  
+  economy:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: economy
+
+  equity:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: equity
+  crypto:
+      type: text
+      mappings:
+      - type: from_entity
+        entity: crypto
+  forex:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: forex
+
+  latest:
+      type: text
+      mappings:
+      - type: from_entity
+        entity: latest
+
+  percent_change:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: percent_change
+
+  candle_types:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: candle_types
+
+  history:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: history
+
+  predict:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: predict
+
+  pattern:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: pattern
+
+  give_best:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: give_best
+
+  pattern_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: pattern_type
+
+  find:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: find
+
+  red_candle:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: red_candle
+
+  steps:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: steps
+
+  tips:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: tips
+
+  ipo_listing_date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ipo_listing_date
+
+  get_data:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: get_data
+      
+  application form:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: application form
+
+  risk factors:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: risk factors
+
+  ways:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ways
+
+  apply:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: apply
+  
+  online:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: online
+
+  offline:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: offline
+
+  Minimum Order Quantity:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: Minimum Order Quantity
+
+  Market Lot Size:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: Market Lot Size
+
+  withdraw_money:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: withdraw_money
+
+  full form:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: full form
+  
+  returns:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: returns
+
+  shares_allocation:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: shares_allocation
+
+  oversubscription:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: oversubscription
+
+  advantages:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: advantages
+
+  disadvantages:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: disadvantages
+
+  ask_where:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ask_where
+  
+  ask_what:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ask_what
+
+  ask_how:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ask_how
+
+  ask_yes_no:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ask_yes_no
+
+  green_candle:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: green_candle
+  
+  candle:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: candle
+
+  are_you_bot:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: are_you_bot
+
+  demat:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: demat
+  
+  stock_resources:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: stock_resources
+  
+  demat_documents:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: demat_documents
+  
+  create_demat:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: create_demat
+  
+  types:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: types
+  
+  is_compulsory:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: is_compulsory
+  
+  demat_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: demat_number
+
+  stock_exchange:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: stock_exchange
+
+  tell_stocks:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: tell_stocks
+  
+  start_trading:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: start_trading
+
+  define:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: define
+
+  working:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: working
+
+  stock market:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: stock market
+
+  market type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: market type
+  
+  current price:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: current price
+  
+  price up:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: price up
+    
+  price down:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: price down
+  
+  close price:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: close price
+  
+  open price:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: open price
+  
+  high price:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: high price
+  
+  low price:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: low price
+  
+  eod price:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: eod price
+  
+  indicator price:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: indicator price
+  
+  indicator_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: indicator_name
+  
+  indicators:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: indicators
+  
+  buy_stock:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: buy_stock
+  
+  sell_stock:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: sell_stock
+  
+  ticker:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ticker
+  
+  quantity:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: quantity
+
+  investment:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: investment
+  
+  which:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: which
+
+  stocks:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: stocks
+  
+  last: 
+    type: text
+    mappings:
+    - type: from_entity
+      entity: last
+  
+  day: 
+    type: text
+    mappings:
+    - type: from_entity
+      entity: day
+
+  hour: 
+    type: text
+    mappings:
+    - type: from_entity
+      entity: hour
+  
+  week: 
+    type: text
+    mappings:
+    - type: from_entity
+      entity: week
+  
+  month: 
+    type: text
+    mappings:
+    - type: from_entity
+      entity: month
+  
+  year:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: year
+
+  top_gainers:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: top_gainers
+
+  rule:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: rule
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
